@@ -7,24 +7,37 @@ import (
 )
 
 func DiceChoice() {
-	fmt.Println("(Y/N)?")
-	var roll string
-	fmt.Scanln(&roll)
+	i := 1
+  maxRolls := 100
+  for ( i < maxRolls) {
+    fmt.Println("(Y/N)?")
+	  var roll string
+	  fmt.Scanln(&roll)
 
-	if roll == "Y" {
-		RandomRoll()
-    fmt.Println("\t")
-		RandomRoll()
-	} else {
-		fmt.Println("Goodbye!")
-	}
+    if roll == "Y" {
+		  RandomRoll()
+      fmt.Println(" ")
+		  RandomRoll()
+      fmt.Println("\n----------")
+      i += 1
+	  } else if roll == "N" {
+		  fmt.Println("Goodbye!")
+      i = 100
+      break
+	  } else {
+      fmt.Println("Invalid input. Try again.")
+      i += 1
+    }
+  }	
 }
 
 func RandomRoll() {
 	var resultMsg string
 	var side int
+  minSide := 1
+  maxSide := 6
   rand.Seed(time.Now().UnixNano())
-	side = rand.Intn(6)
+	side = rand.Intn(maxSide - minSide + 1) + minSide
 
 	switch side {
 	case 1:
