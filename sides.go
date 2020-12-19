@@ -43,20 +43,26 @@ func RandomRoll() {
 	case 1:
 		resultMsg = "1"
 		fmt.Print("Roll: " + resultMsg)
+    drawOne()
 	case 2:
 		resultMsg = "2"
 		fmt.Print("Roll: " + resultMsg)
+    drawTwo()
 	case 3:
 		resultMsg = "3"
 		fmt.Print("Roll: " + resultMsg)
+    drawThree()
 	case 4:
 		resultMsg = "4"
 		fmt.Print("Roll: " + resultMsg)
+    drawFour()
 	case 5:
 		resultMsg = "5"
 		fmt.Print("Roll: " + resultMsg)
+    drawFive()
 	case 6:
 		resultMsg = "6"
 		fmt.Print("Roll: " + resultMsg)
+    drawSix()
 	}
 }
