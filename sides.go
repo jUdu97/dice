@@ -15,9 +15,16 @@ func DiceChoice() {
 	  fmt.Scanln(&roll)
 
     if roll == "Y" {
-		  RandomRoll()
+		  firstDice := RandomRoll()
       fmt.Println(" ")
-		  RandomRoll()
+		  secondDice := RandomRoll()
+      if (firstDice == "Roll: 1" && secondDice == "Roll: 1"){
+        fmt.Println("Snake eyes!")
+      } else {
+        // fmt.Println(firstDice)
+        fmt.Println(" ")
+        // fmt.Println(secondDice)
+      }
       fmt.Println("\n----------")
       i += 1
 	  } else if roll == "N" {
@@ -31,7 +38,7 @@ func DiceChoice() {
   }	
 }
 
-func RandomRoll() {
+func RandomRoll() string {
 	var resultMsg string
 	var side int
   minSide := 1
@@ -40,29 +47,24 @@ func RandomRoll() {
 	side = rand.Intn(maxSide - minSide + 1) + minSide
 
 	switch side {
-	case 1:
-		resultMsg = "1"
-		fmt.Print("Roll: " + resultMsg)
-    drawOne()
-	case 2:
-		resultMsg = "2"
-		fmt.Print("Roll: " + resultMsg)
-    drawTwo()
-	case 3:
-		resultMsg = "3"
-		fmt.Print("Roll: " + resultMsg)
-    drawThree()
-	case 4:
-		resultMsg = "4"
-		fmt.Print("Roll: " + resultMsg)
-    drawFour()
-	case 5:
-		resultMsg = "5"
-		fmt.Print("Roll: " + resultMsg)
-    drawFive()
-	case 6:
-		resultMsg = "6"
-		fmt.Print("Roll: " + resultMsg)
-    drawSix()
+    case 1:
+      resultMsg = "Roll: 1" 
+      drawOne()
+    case 2:
+      resultMsg = "Roll: 2"
+      drawTwo()
+    case 3:
+      resultMsg = "Roll: 3"
+      drawThree()
+    case 4:
+      resultMsg = "Roll: 4"
+      drawFour()
+    case 5:
+      resultMsg = "Roll: 5"
+      drawFive()
+    case 6:
+      resultMsg = "Roll: 6"
+      drawSix()
 	}
+  return resultMsg
 }
