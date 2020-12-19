@@ -1,52 +1,52 @@
 package main
 
-import "fmt"
+// import "fmt"
 
-func drawOne() {
-  fmt.Println("\n")
-  fmt.Println(" _______")
-  fmt.Println("/______/|")
-  fmt.Println("|      ||")
-  fmt.Println("|  1   ||")
-  fmt.Println("|______|/")
-}
-func drawTwo() {
-  fmt.Println("\n")
-  fmt.Println(" _______")
-  fmt.Println("/______/|")
-  fmt.Println("|      ||")
-  fmt.Println("|  2   ||")
-  fmt.Println("|______|/")
-}
-func drawThree() {
-  fmt.Println("\n")
-  fmt.Println(" _______")
-  fmt.Println("/______/|")
-  fmt.Println("|      ||")
-  fmt.Println("|  3   ||")
-  fmt.Println("|______|/")
-}
-func drawFour() {
-   fmt.Println("\n")
-  fmt.Println(" _______")
-  fmt.Println("/______/|")
-  fmt.Println("|      ||")
-  fmt.Println("|  4   ||")
-  fmt.Println("|______|/")
-}
-func drawFive() {
-  fmt.Println("\n")
-  fmt.Println(" _______")
-  fmt.Println("/______/|")
-  fmt.Println("|      ||")
-  fmt.Println("|  5   ||")
-  fmt.Println("|______|/")
-}
-func drawSix() {
-  fmt.Println("\n")
-  fmt.Println(" _______")
-  fmt.Println("/______/|")
-  fmt.Println("|      ||")
-  fmt.Println("|  6   ||")
-  fmt.Println("|______|/")
+func DrawSide(diceNum int) string {
+  var diceSide string
+  switch diceNum {
+    case 1:
+      diceSide += "\n"
+      diceSide += " _______\n"
+      diceSide += "/______/|\n"
+      diceSide += "|      ||\n"
+      diceSide += "|  1   ||\n"
+      diceSide += "|______|/"
+    case 2:
+      diceSide += "\n"
+      diceSide += " _______\n"
+      diceSide += "/______/|\n"
+      diceSide += "|      ||\n"
+      diceSide += "|  2   ||\n"
+      diceSide += "|______|/"
+    case 3:
+      diceSide += "\n"
+      diceSide += " _______\n"
+      diceSide += "/______/|\n"
+      diceSide += "|      ||\n"
+      diceSide += "|  3   ||\n"
+      diceSide += "|______|/"
+    case 4:
+      diceSide += "\n"
+      diceSide += " _______\n"
+      diceSide += "/______/|\n"
+      diceSide += "|      ||\n"
+      diceSide += "|  4   ||\n"
+      diceSide += "|______|/"
+    case 5:
+      diceSide += "\n"
+      diceSide += " _______\n"
+      diceSide += "/______/|\n"
+      diceSide += "|      ||\n"
+      diceSide += "|  5   ||\n"
+      diceSide += "|______|/"
+    case 6:
+      diceSide += "\n"
+      diceSide += " _______\n"
+      diceSide += "/______/|\n"
+      diceSide += "|      ||\n"
+      diceSide += "|  6   ||\n"
+      diceSide += "|______|/"
+  }
+  return diceSide
 }
