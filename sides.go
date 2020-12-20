@@ -18,6 +18,7 @@ func DiceChoice() {
     if roll == "Y" || roll == "y" {
 		  firstDice := RandomRoll()
 		  secondDice := RandomRoll()
+      TimeWait()
       if (firstDice == "Roll: 1" && secondDice == "Roll: 1"){
         fmt.Println("Snake eyes!")
       } else {
