@@ -11,26 +11,27 @@ func DiceChoice() {
   maxRolls := 100
   for ( i < maxRolls) {
     fmt.Println("(Y/N)?")
+    
 	  var roll string
 	  fmt.Scanln(&roll)
 
-    if roll == "Y" {
+    if roll == "Y" || roll == "y" {
 		  firstDice := RandomRoll()
 		  secondDice := RandomRoll()
       if (firstDice == "Roll: 1" && secondDice == "Roll: 1"){
         fmt.Println("Snake eyes!")
       } else {
-        fmt.Println(firstDice)
-        fmt.Println(" ")
-        fmt.Println(secondDice)
+        fmt.Println("----------")
+        fmt.Println(firstDice + "\n" + secondDice)
       }
       fmt.Println("\n----------")
       i += 1
-	  } else if roll == "N" {
+	  } else if roll == "N" || roll == "n" {
 		  fmt.Println("Goodbye!")
       i = 100
       break
 	  } else {
+      fmt.Println("----------\n")
       fmt.Println("Invalid input. Try again.")
       i += 1
     }

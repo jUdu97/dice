@@ -7,6 +7,6 @@ import (
 func main() {
   fmt.Println("Welcome to Delman's Dice Game!")
 	fmt.Println("------------------------------")
-	fmt.Println("Click below to roll the dice.")
+	fmt.Println("Enter below to roll the dice.")
   DiceChoice()
 }
