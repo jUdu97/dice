@@ -1,44 +1,26 @@
 package main
 
-func DrawSide(diceNum int) string {
+func DrawSixSide(diceNum int) string {
   var diceSide string
+  diceSide += " _______\n"
+  diceSide += "/______/|\n"
+  diceSide += "|      ||\n"
+  diceSide += "|  "
   switch diceNum {
     case 1:
-      diceSide += " _______\n"
-      diceSide += "/______/|\n"
-      diceSide += "|      ||\n"
-      diceSide += "|  1   ||\n"
-      diceSide += "|______|/"
+      diceSide += "1"
     case 2:
-      diceSide += " _______\n"
-      diceSide += "/______/|\n"
-      diceSide += "|      ||\n"
-      diceSide += "|  2   ||\n"
-      diceSide += "|______|/"
+      diceSide += "2"
     case 3:
-      diceSide += " _______\n"
-      diceSide += "/______/|\n"
-      diceSide += "|      ||\n"
-      diceSide += "|  3   ||\n"
-      diceSide += "|______|/"
+      diceSide += "3"
     case 4:
-      diceSide += " _______\n"
-      diceSide += "/______/|\n"
-      diceSide += "|      ||\n"
-      diceSide += "|  4   ||\n"
-      diceSide += "|______|/"
+      diceSide += "4"
     case 5:
-      diceSide += " _______\n"
-      diceSide += "/______/|\n"
-      diceSide += "|      ||\n"
-      diceSide += "|  5   ||\n"
-      diceSide += "|______|/"
+      diceSide += "5"
     case 6:
-      diceSide += " _______\n"
-      diceSide += "/______/|\n"
-      diceSide += "|      ||\n"
-      diceSide += "|  6   ||\n"
-      diceSide += "|______|/"
+      diceSide += "6"
   }
+  diceSide += "   ||\n"
+  diceSide += "|______|/"
   return diceSide
 }
