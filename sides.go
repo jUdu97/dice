@@ -25,16 +25,11 @@ func DiceChoice() {
       if (typeChoice == "6"){
         typeOne := DiceType {
           EnterMsg: "Roll a 6-sided pair of dice",
+          firstDice: RandomSixRoll(),
+          secondDice: RandomSixRoll(),
         }
-        firstDice := RandomSixRoll()
-        secondDice := RandomSixRoll()
         typeOne.TimeWait()
-        if (firstDice == "1" && secondDice == "1"){
-          fmt.Println("Snake eyes!")
-        } else {
-          fmt.Println("----------")
-          fmt.Println(firstDice + "\n" + secondDice)
-        }
+        typeOne.ShowRollSix()
       } else if (typeChoice == "10") {
         typeTwo := DiceType {
           EnterMsg: "Roll a 10-sided pair of dice",
