@@ -18,16 +18,17 @@ func (d DiceType) TimeWait() {
   fmt.Println("\nRolling........\n")
   <- waitTime.C
 }
-func (e DiceType) ShowRollSix() {
-  
-  if (e.firstDice == "1" && e.secondDice == "1"){
+func (d DiceType) ShowRollSix() {
+  d.firstDice = d.RandomSixRoll()
+  d.secondDice = d.RandomSixRoll()
+  if (d.firstDice == "1" && d.secondDice == "1"){
     fmt.Println("Snake eyes!")
-    } else {
+  } else {
       fmt.Println("----------")
-      fmt.Println(e.firstDice + "\n" + e.secondDice)
-    }
+      fmt.Println(d.firstDice + "\n" + d.secondDice)
+  }
 }
-func (e DiceType) RandomSixRoll() string {
+func (d DiceType) RandomSixRoll() string {
 	var resultMsg string
 	var side int
   minSide := 1
@@ -51,6 +52,41 @@ func (e DiceType) RandomSixRoll() string {
 	}
   return resultMsg
 }
-func (f DiceType) ShowRollTen() {
-  
+func (d DiceType) ShowRollTen() {
+  d.firstDice = d.RandomTenRoll()
+  d.secondDice = d.RandomTenRoll()
+  fmt.Println("----------")
+  fmt.Println(d.firstDice + "\n" + d.secondDice)
+}
+func (d DiceType) RandomTenRoll() string {
+	var resultTenMsg string
+	var sideTen int
+  minTenSide := 1
+  maxTenSide := 10
+  rand.Seed(time.Now().UnixNano())
+	sideTen = rand.Intn(maxTenSide - minTenSide + 1) + minTenSide
+
+	switch sideTen {
+    case 1:
+      resultTenMsg = DrawTenSide(1)
+    case 2:
+      resultTenMsg = DrawTenSide(2)
+    case 3:
+      resultTenMsg = DrawTenSide(3)
+    case 4:
+      resultTenMsg = DrawTenSide(4)
+    case 5:
+      resultTenMsg = DrawTenSide(5)
+    case 6:
+      resultTenMsg = DrawTenSide(6)
+    case 7:
+      resultTenMsg = DrawTenSide(7)
+    case 8:
+      resultTenMsg = DrawTenSide(8)
+    case 9:
+      resultTenMsg = DrawTenSide(9)
+    case 10:
+      resultTenMsg = DrawTenSide(10)
+	}
+  return resultTenMsg
 }
