@@ -90,3 +90,60 @@ func (d DiceType) RandomTenRoll() string {
 	}
   return resultTenMsg
 }
+func (d DiceType) ShowRollDnD() {
+  d.firstDice = d.RandomDnDRoll()
+  fmt.Println("----------")
+  fmt.Println(d.firstDice)
+}
+func (d DiceType) RandomDnDRoll() string {
+	var resultDnDMsg string
+	var sideDnD int
+  minTenSide := 1
+  maxTenSide := 20
+  rand.Seed(time.Now().UnixNano())
+	sideDnD = rand.Intn(maxTenSide - minTenSide + 1) + minTenSide
+
+	switch sideDnD {
+    case 1:
+      resultDnDMsg = DrawDnDSide(1)
+    case 2:
+      resultDnDMsg = DrawDnDSide(2)
+    case 3:
+      resultDnDMsg = DrawDnDSide(3)
+    case 4:
+      resultDnDMsg = DrawDnDSide(4)
+    case 5:
+      resultDnDMsg = DrawDnDSide(5)
+    case 6:
+      resultDnDMsg = DrawDnDSide(6)
+    case 7:
+      resultDnDMsg = DrawDnDSide(7)
+    case 8:
+      resultDnDMsg = DrawDnDSide(8)
+    case 9:
+      resultDnDMsg = DrawDnDSide(9)
+    case 10:
+      resultDnDMsg = DrawDnDSide(10)
+    case 11:
+      resultDnDMsg = DrawDnDSide(11)
+    case 12:
+      resultDnDMsg = DrawDnDSide(12)
+    case 13:
+      resultDnDMsg = DrawDnDSide(13)
+    case 14:
+      resultDnDMsg = DrawDnDSide(14)
+    case 15:
+      resultDnDMsg = DrawDnDSide(15)
+    case 16:
+      resultDnDMsg = DrawDnDSide(16)
+    case 17:
+      resultDnDMsg = DrawDnDSide(17)
+    case 18:
+      resultDnDMsg = DrawDnDSide(18)
+    case 19:
+      resultDnDMsg = DrawDnDSide(19)
+    case 20:
+      resultDnDMsg = DrawDnDSide(20)
+	}
+  return resultDnDMsg
+}

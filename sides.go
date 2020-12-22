@@ -16,6 +16,7 @@ func DiceChoice() {
     if (roll == "Y" || roll == "y") {
       fmt.Println("\n6-sided dice........Enter 6")
       fmt.Println("\n10-sided dice........Enter 10")
+      fmt.Println("\n20-sided dice........Enter 20")
 
       fmt.Println("What type of dice?")
       fmt.Scanln(&typeChoice)
@@ -31,6 +32,12 @@ func DiceChoice() {
         }
         typeTwo.TimeWait()
         typeTwo.ShowRollTen()
+      } else if (typeChoice == "20") {
+        typeThree := DiceType {
+          EnterMsg: "Roll a 20-sided pair of dice",
+        }
+        typeThree.TimeWait()
+        typeThree.ShowRollDnD()
       } else {
         fmt.Println("Invalid input. Please try again.")
       }

@@ -1,6 +1,6 @@
 package main
 
-func DrawTwentySide(diceNum int) string {
+func DrawDnDSide(diceNum int) string {
   var diceDnDSide string
   diceDnDSide += " ________\n"
   diceDnDSide += "/_______/|\n"
