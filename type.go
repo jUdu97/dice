@@ -12,17 +12,19 @@ type DiceType struct {
   secondDice string
 }
 
-func (d DiceType) TimeWait() {
+func (d DiceType) TimeWait(EnterMsg string) {
   fmt.Printf("%s", d.EnterMsg)
   waitTime := time.NewTimer(5 * time.Second)
-  fmt.Println("\nRolling........\n")
+  fmt.Println("\nRolling a " + EnterMsg + "-sided pair of dice ........\n")
   <- waitTime.C
 }
 func (d DiceType) ShowRollSix() {
   d.firstDice = d.RandomSixRoll()
   d.secondDice = d.RandomSixRoll()
-  if (d.firstDice == "1" && d.secondDice == "1"){
-    fmt.Println("Snake eyes!")
+  d.TimeWait("6")
+  
+  if (d.firstDice == DrawSixSide(1) && d.secondDice == DrawSixSide(1)){
+    fmt.Println("SNAKES EYES!")
   } else {
       fmt.Println("----------")
       fmt.Println(d.firstDice + "\n" + d.secondDice)
@@ -55,6 +57,7 @@ func (d DiceType) RandomSixRoll() string {
 func (d DiceType) ShowRollTen() {
   d.firstDice = d.RandomTenRoll()
   d.secondDice = d.RandomTenRoll()
+  d.TimeWait("10")
   fmt.Println("----------")
   fmt.Println(d.firstDice + "\n" + d.secondDice)
 }
@@ -92,6 +95,7 @@ func (d DiceType) RandomTenRoll() string {
 }
 func (d DiceType) ShowRollDnD() {
   d.firstDice = d.RandomDnDRoll()
+  d.TimeWait("20")
   fmt.Println("----------")
   fmt.Println(d.firstDice)
 }

@@ -21,22 +21,13 @@ func DiceChoice() {
       fmt.Println("What type of dice?")
       fmt.Scanln(&typeChoice)
       if (typeChoice == "6"){
-        typeOne := DiceType {
-          EnterMsg: "Roll a 6-sided pair of dice",
-        }
-        typeOne.TimeWait()
+        typeOne := DiceType {}
         typeOne.ShowRollSix()
       } else if (typeChoice == "10") {
-        typeTwo := DiceType {
-          EnterMsg: "Roll a 10-sided pair of dice",
-        }
-        typeTwo.TimeWait()
+        typeTwo := DiceType {}
         typeTwo.ShowRollTen()
       } else if (typeChoice == "20") {
-        typeThree := DiceType {
-          EnterMsg: "Roll a 20-sided pair of dice",
-        }
-        typeThree.TimeWait()
+        typeThree := DiceType {}
         typeThree.ShowRollDnD()
       } else {
         fmt.Println("Invalid input. Please try again.")
