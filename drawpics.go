@@ -1,5 +1,79 @@
 package main
 
+func DrawSixSide(diceNum int) string {
+  var diceSide string
+  diceSide += " _______\n"
+  diceSide += "/______/|\n"
+  diceSide += "|      ||\n"
+  diceSide += "|  "
+  switch diceNum {
+    case 1:
+      diceSide += "1"
+    case 2:
+      diceSide += "2"
+    case 3:
+      diceSide += "3"
+    case 4:
+      diceSide += "4"
+    case 5:
+      diceSide += "5"
+    case 6:
+      diceSide += "6"
+  }
+  diceSide += "   ||\n"
+  diceSide += "|______|/"
+  return diceSide
+}
+func DrawTenSide(diceNum int) string {
+  var diceTenSide string
+  diceTenSide += " ________\n"
+  diceTenSide += "/_______/|\n"
+  diceTenSide += "|       ||\n"
+  diceTenSide += "|  "
+  switch diceNum {
+    case 1:
+      diceTenSide += "1"
+      diceTenSide += "    ||\n"
+      diceTenSide += "|_______|/"
+    case 2:
+      diceTenSide += "2"
+      diceTenSide += "    ||\n"
+      diceTenSide += "|_______|/"
+    case 3:
+      diceTenSide += "3"
+      diceTenSide += "    ||\n"
+      diceTenSide += "|_______|/"
+    case 4:
+      diceTenSide += "4"
+      diceTenSide += "    ||\n"
+      diceTenSide += "|_______|/"
+    case 5:
+      diceTenSide += "5"
+      diceTenSide += "    ||\n"
+      diceTenSide += "|_______|/"
+    case 6:
+      diceTenSide += "6"
+      diceTenSide += "    ||\n"
+      diceTenSide += "|_______|/"
+    case 7:
+      diceTenSide += "7"
+      diceTenSide += "    ||\n"
+      diceTenSide += "|_______|/"
+    case 8:
+      diceTenSide += "8"
+      diceTenSide += "    ||\n"
+      diceTenSide += "|_______|/"
+    case 9:
+      diceTenSide += "9"
+      diceTenSide += "    ||\n"
+      diceTenSide += "|_______|/"
+    case 10:
+      diceTenSide += "10"
+      diceTenSide += "   ||\n"
+      diceTenSide += "|_______|/"
+  }
+  return diceTenSide
+}
 func DrawDnDSide(diceNum int) string {
   var diceDnDSide string
   diceDnDSide += " ________\n"
