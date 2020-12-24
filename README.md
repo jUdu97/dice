@@ -9,6 +9,7 @@ Delman's Dice Game is a Golang (Go) application that rolls different types of di
 2. Open Command Prompt / Windows PowerShell / Terminal
 
 3. To get the folder, *cd* and *ls* to the unzippped **dice** folder for Delman's Dice Game.
+
 First, enter the following command.
 ``` bash
 go build 
