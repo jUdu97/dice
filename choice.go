@@ -22,7 +22,7 @@ func diceChoice() {
       fmt.Print("\n10-sided dice........Enter 10")
       fmt.Print("\n20-sided dice........Enter 20")
 
-      fmt.Println("What type of dice?")
+      fmt.Println("\nWhat type of dice?")
       fmt.Scanln(&typeChoice)
       if (typeChoice == "6"){
         typeOne := DiceType {}
