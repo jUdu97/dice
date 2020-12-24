@@ -7,18 +7,21 @@ import (
 )
 
 type DiceType struct {
-  EnterMsg string
-  firstDice string
-  secondDice string
+  //Define struct for types of dice
+  EnterMsg string //Message to show chosen dice
+  firstDice string //First dice to be rolled 
+  secondDice string //Second dice to be rolled
 }
 
 func (d DiceType) TimeWait(EnterMsg string) {
+  //Prints waiting message while dice rolls
   fmt.Printf("%s", d.EnterMsg)
   waitTime := time.NewTimer(5 * time.Second)
   fmt.Println("\nRolling a " + EnterMsg + "-sided pair of dice ........\n")
   <- waitTime.C
 }
 func (d DiceType) ShowRollSix() {
+  //Shows a pair of 6-sided dice
   d.firstDice = d.RandomSixRoll()
   d.secondDice = d.RandomSixRoll()
   d.TimeWait("6")
@@ -31,6 +34,7 @@ func (d DiceType) ShowRollSix() {
   }
 }
 func (d DiceType) RandomSixRoll() string {
+  //Prints a randomly selected 6-sided dice side
 	var resultMsg string
 	var side int
   minSide := 1
@@ -55,6 +59,7 @@ func (d DiceType) RandomSixRoll() string {
   return resultMsg
 }
 func (d DiceType) ShowRollTen() {
+  //Shows a pair of 10-sided dice
   d.firstDice = d.RandomTenRoll()
   d.secondDice = d.RandomTenRoll()
   d.TimeWait("10")
@@ -62,6 +67,7 @@ func (d DiceType) ShowRollTen() {
   fmt.Println(d.firstDice + "\n" + d.secondDice)
 }
 func (d DiceType) RandomTenRoll() string {
+  //Prints a randomly selected 10-sided dice side
 	var resultTenMsg string
 	var sideTen int
   minTenSide := 1
@@ -94,12 +100,14 @@ func (d DiceType) RandomTenRoll() string {
   return resultTenMsg
 }
 func (d DiceType) ShowRollDnD() {
+  //Shows a 20-sided dice
   d.firstDice = d.RandomDnDRoll()
   d.TimeWait("20")
   fmt.Println("----------")
   fmt.Println(d.firstDice)
 }
 func (d DiceType) RandomDnDRoll() string {
+  //Prints a randomly selected 20-sided dice side
 	var resultDnDMsg string
 	var sideDnD int
   minTenSide := 1

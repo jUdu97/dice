@@ -1,12 +1,16 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func DiceChoice() {
-	i := 1
-  maxRolls := 100
+
+func diceChoice() {
+  /*
+    Prints out menu of dice choices
+    Asks user for input of their choice of dice
+  */
+
+	var i, maxRolls int = 1, 100
+
   for ( i < maxRolls) {
     var roll, typeChoice string
     
@@ -14,9 +18,9 @@ func DiceChoice() {
 	  fmt.Scanln(&roll)
 
     if (roll == "Y" || roll == "y") {
-      fmt.Println("\n6-sided dice........Enter 6")
-      fmt.Println("\n10-sided dice........Enter 10")
-      fmt.Println("\n20-sided dice........Enter 20")
+      fmt.Print("\n6-sided dice........Enter 6")
+      fmt.Print("\n10-sided dice........Enter 10")
+      fmt.Print("\n20-sided dice........Enter 20")
 
       fmt.Println("What type of dice?")
       fmt.Scanln(&typeChoice)
@@ -34,7 +38,7 @@ func DiceChoice() {
       }
       fmt.Println("\n----------")
       i += 1
-	  } else if roll == "N" || roll == "n" {
+	  } else if (roll == "N" || roll == "n") {
 		  fmt.Println("Goodbye!")
       i = 100
       break
@@ -42,6 +46,6 @@ func DiceChoice() {
       fmt.Println("----------")
       fmt.Println("Invalid input. Try again.")
       i += 1
-    }
-  }	
+    }//end inner if, else if, else statements
+  } //end for loop
 }

@@ -1,6 +1,7 @@
 package main
 
 func DrawSixSide(diceNum int) string {
+  //Draws a 6-sided dice
   var diceSide string
   diceSide += " _______\n"
   diceSide += "/______/|\n"
@@ -25,6 +26,7 @@ func DrawSixSide(diceNum int) string {
   return diceSide
 }
 func DrawTenSide(diceNum int) string {
+  //Draws a 10-sided dice
   var diceTenSide string
   diceTenSide += " ________\n"
   diceTenSide += "/_______/|\n"
@@ -75,6 +77,7 @@ func DrawTenSide(diceNum int) string {
   return diceTenSide
 }
 func DrawDnDSide(diceNum int) string {
+  //Draws a 20-sided dice
   var diceDnDSide string
   diceDnDSide += " ________\n"
   diceDnDSide += "/_______/|\n"

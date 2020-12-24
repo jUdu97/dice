@@ -5,8 +5,10 @@ import (
 )
 
 func main() {
-  fmt.Println("Welcome to Delman's Dice Game!")
-	fmt.Println("------------------------------")
-	fmt.Println("Enter below to roll the dice.")
-  DiceChoice()
+  //Print introduction to game of dice
+  fmt.Print("Welcome to Delman's Dice Game!")
+	fmt.Print("\n------------------------------")
+	fmt.Print("\nEnter below to roll the dice.")
+  //Call choice of dice function
+  diceChoice() 
 }
