@@ -14,7 +14,7 @@ func diceChoice() {
   for ( i < maxRolls) {
     var roll, typeChoice string
     
-    fmt.Println("(Y/N)?")
+    fmt.Print("(Y/N)?")
 	  fmt.Scanln(&roll)
 
     if (roll == "Y" || roll == "y") {
